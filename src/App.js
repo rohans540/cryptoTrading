@@ -59,14 +59,18 @@ export default function App() {
       <Button label="Buy" onClick={buyHandler} color="green" />
       <Button label="Sell" onClick={sellHandler} color="red" />
 
-      <div style={{ marginTop: "100px" }}>
+      <div style={{ marginTop: "100px", marginBottom: "10px" }}>
         {state.buying &&
           state.buying.map((li) => {
             return (
               <List id={li.id} price={li.price} size={li.size} color="green" />
             );
           })}
-
+      </div>
+      {(state.buying.length > 0 || state.selling.length > 0) && (
+        <div style={{ border: "1px solid #919294" }}></div>
+      )}
+      <div style={{ marginTop: "10px" }}>
         {state.selling &&
           state.selling.map((li) => {
             return (

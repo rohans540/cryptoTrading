@@ -6,11 +6,7 @@ const Button = ({ onClick, label, color }) => {
       <button
         onClick={onClick}
         style={{
-          background: color,
-          height: "30px",
-          width: "150px",
-          borderRadius: "2px",
-          color: "#fff"
+          background: color
         }}
       >
         {label}
